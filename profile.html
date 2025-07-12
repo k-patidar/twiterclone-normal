@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ username }}'s Tweets</h2>
+<ul>
+    {% for tweet in tweets %}
+        <li>
+            {{ tweet[0] }} 
+            <span class="timestamp">{{ tweet[1] }}</span>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
